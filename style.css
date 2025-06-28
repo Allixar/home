@@ -9,33 +9,40 @@ body {
   width: 300px;
   padding: 30px;
   box-sizing: border-box;
-  text-align: left; 
+  text-align: left; /* left align by default */
 }
 
 .sidebar h1 {
   color: #2c3e50;
-  text-align: center; 
+  text-align: center; /* center your name */
 }
 
 .profile-photo {
   display: block;
-  margin: 20px auto; 
+  margin: 20px auto; /* center photo */
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
 }
 
+.sidebar .intro {
+  text-align: left; /* force left for intro paragraph */
+  color: #555;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
 .sidebar p {
   color: #555;
-  line-height: 1.6; 
+  line-height: 1.6;
   margin: 15px 0;
 }
 
 .sidebar a {
   color: #3498db;
   text-decoration: none;
-  display: block; 
+  display: block;
   margin: 8px 0;
 }
 
