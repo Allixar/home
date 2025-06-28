@@ -9,33 +9,43 @@ body {
   width: 300px;
   padding: 30px;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left; 
 }
 
 .sidebar h1 {
   color: #2c3e50;
+  text-align: center; 
+}
+
+.profile-photo {
+  display: block;
+  margin: 20px auto; 
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .sidebar p {
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6; 
+  margin: 15px 0;
 }
 
 .sidebar a {
   color: #3498db;
   text-decoration: none;
+  display: block; 
+  margin: 8px 0;
 }
 
 .sidebar a:hover {
   color: #2ecc71;
 }
 
-.profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 20px 0;
+.sidebar h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .main-content {
@@ -77,4 +87,3 @@ body {
 .videos iframe {
   border: none;
 }
-
