@@ -1,48 +1,67 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #f4f6f8;
+  width: 300px;
+  padding: 30px;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
-}
-
-h1 {
+.sidebar h1 {
   color: #2c3e50;
 }
 
-h2 {
-  color: #34495e;
-  margin-top: 40px;
+.sidebar p {
+  color: #555;
+  line-height: 1.5;
 }
 
-a {
+.sidebar a {
   color: #3498db;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-a:hover {
+.sidebar a:hover {
   color: #2ecc71;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
 }
 
-li {
-  margin: 10px 0;
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+  background: white;
 }
 
+.main-content h2 {
+  color: #2c3e50;
+}
+
+.main-content h3 {
+  margin-top: 40px;
+  color: #34495e;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project h4 {
+  color: #2980b9;
+}
+
+.project p {
+  color: #333;
+  line-height: 1.5;
+}
