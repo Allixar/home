@@ -41,23 +41,4 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-// Add this animation code to your script.js file
-window.addEventListener('load', () => {
-  anime({
-    targets: '.portfolio-path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    easing: 'easeInOutSine',
-    duration: 1500,
-    delay: function(el, i) { return i * 250 },
-    direction: 'alternate',
-    loop: true
-  });
-});
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  const container = document.getElementById('main-container');
-  if (container) {
-    container.style.opacity = 1;
-    container.style.transform = 'translateY(0)';
-  }
-});
