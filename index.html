@@ -40,7 +40,26 @@
         </div>
         <div class="project">
           <h4>Multimodal Biometric Authentication Project</h4>
-          <p>Fusion of face and palmprint biometrics using Python, OpenCV, and scikit-learn to enhance authentication security and accuracy.</p>
+          [cite_start]<p>Fusion of face and palmprint biometrics using Python, OpenCV, and scikit-learn to enhance authentication security and accuracy, especially when face coverings are present[cite: 1, 9]. [cite_start]This system demonstrates improved robustness over single-modality methods by combining the unique features of both traits[cite: 8].</p>
+          <button class="read-more-btn" onclick="toggleProjectDetails('biometrics-details')">Read More</button>
+          <div id="biometrics-details" class="project-details" style="display: none;">
+            <h5>Project Overview</h5>
+            [cite_start]<p>Traditional single-modality biometric systems are vulnerable to spoofing and fail when the biometric input is obscured, a problem highlighted during the COVID-19 pandemic with face masks[cite: 6, 13, 146]. [cite_start]This project addresses these issues by fusing facial and palmprint data at the score-level to create a more resilient and accurate authentication system[cite: 7, 66].</p>
+            <h5>Key Research Questions</h5>
+            <ul>
+              [cite_start]<li>How does combining face and palmprint data affect authentication performance compared to a single modality? [cite: 19]</li>
+              [cite_start]<li>What is the impact of facial occlusions (like masks and glasses) on the multimodal system's performance? [cite: 21]</li>
+            </ul>
+            <h5>Methods & Datasets</h5>
+            <p>The system was developed using Python, Dlib, and scikit-learn. [cite_start]It leverages two public datasets: the <strong>Specs on Faces (SoF) Dataset</strong> for facial images with occlusions and the <strong>Birjand University Mobile Palmprint Database (BMPD)</strong>[cite: 17, 46]. [cite_start]Features were extracted from each and fed into five classification models (KNN, Decision Tree, SVM, Logistic Regression, LDA) [cite: 50-52, 56-61].</p>
+            <h5>Key Results</h5>
+            [cite_start]<p>The k-Nearest Neighbors (KNN) classifier performed best for both individual modalities, with an Equal Error Rate (EER) of 0.192 for faces and 0.196 for palmprints[cite: 79, 81]. [cite_start]While the face modality showed better separation between genuine and impostor scores, the fusion of both created a more balanced and robust system, validating the hypothesis that multimodal systems are more resilient, especially against occlusions[cite: 85, 87, 93, 97].</p>
+            <div class="project-visuals">
+                <img src="https://i.imgur.com/xLg6Q59.png" alt="Combined ROC Curve for Face Classifiers">
+                <img src="https://i.imgur.com/yVqfW9o.png" alt="Combined ROC Curve for Palm Classifiers">
+                <img src="https://i.imgur.com/N7sJcfC.png" alt="Bar chart showing Score-Level Fusion Metrics for EER, FAR, and FRR">
+            </div>
+          </div>
         </div>
       </article>
 
