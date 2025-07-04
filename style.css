@@ -217,21 +217,3 @@ body {
   margin-top: 0;
 }
 
-/* Add these new styles to your style.css file */
-
-.project-header {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* This adds a small space between the title and button */
-  margin-bottom: 10px;
-  flex-wrap: wrap; /* Good for responsiveness */
-}
-
-.project-header h4 {
-  margin: 0; /* Removes default margin from the heading */
-}
-
-.project-header .read-more-btn {
-  margin-top: 0; /* Resets the original margin */
-  flex-shrink: 0; /* Prevents the button from shrinking */
-}
