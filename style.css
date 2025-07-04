@@ -193,3 +193,12 @@ body {
     text-align: center;
   }
 }
+
+.project-info {
+  margin-bottom: 20px;
+}
+
+.project-info .read-more-btn {
+  margin-top: 15px;
+  display: inline-block; /* Ensures margin-top works correctly */
+}
