@@ -82,6 +82,7 @@ body {
   margin-bottom: 40px;
   padding-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
+  padding-left: 20px; /* Padding added here */
 }
 
 .project-category:last-child {
@@ -90,7 +91,7 @@ body {
 
 .project {
   margin-bottom: 30px;
-  padding-left: 20px; /* Retaining some padding for alignment */
+  /* Padding removed from here */
 }
 
 .project h4 {
