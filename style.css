@@ -201,16 +201,3 @@ body {
   }
 }
 
-.portfolio-title {
-  width: 400px;
-  height: 50px;
-  display: block;
-}
-
-.portfolio-path {
-  stroke-width: 1;
-  stroke: var(--heading-color);
-  fill: none;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-}
