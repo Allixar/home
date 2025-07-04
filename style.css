@@ -221,9 +221,10 @@ body {
 
 .project-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px; /* Adds some space below the header */
+  gap: 15px; /* This adds a small space between the title and button */
+  margin-bottom: 10px;
+  flex-wrap: wrap; /* Good for responsiveness */
 }
 
 .project-header h4 {
