@@ -1,96 +1,111 @@
+/* At the top of your file */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
+  background-color: #f4f6f8; /* Moved from sidebar to body */
+}
+
+#main-container {
+  display: flex;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .sidebar {
-  background-color: #f4f6f8;
   width: 300px;
   padding: 30px;
-  box-sizing: border-box;
-  text-align: left; /* left align by default */
+  flex-shrink: 0; /* Prevents the sidebar from shrinking */
 }
 
-.sidebar h1 {
-  color: #2c3e50;
-  text-align: center; /* center your name */
+.sidebar header {
+  text-align: center;
 }
 
 .profile-photo {
-  display: block;
-  margin: 20px auto; /* center photo */
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.sidebar .intro {
-  text-align: left; /* force left for intro paragraph */
-  color: #555;
-  line-height: 1.6;
-  margin: 15px 0;
+.sidebar h1 {
+  color: #2c3e50;
 }
 
-.sidebar p {
+.sidebar .intro p {
+  text-align: left;
   color: #555;
   line-height: 1.6;
-  margin: 15px 0;
 }
 
 .sidebar a {
   color: #3498db;
   text-decoration: none;
-  display: block;
-  margin: 8px 0;
+  transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
   color: #2ecc71;
 }
 
-.sidebar h3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
 .main-content {
   flex-grow: 1;
   padding: 40px;
   background: white;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
-.main-content h2 {
-  color: #2c3e50;
-}
-
-.main-content h3 {
-  margin-top: 40px;
-  color: #34495e;
+.project-category {
+  margin-bottom: 40px;
 }
 
 .project {
   margin-bottom: 30px;
+  border-left: 3px solid #3498db;
+  padding-left: 20px;
 }
 
 .project h4 {
   color: #2980b9;
 }
 
-.project p {
-  color: #333;
-  line-height: 1.5;
-}
-
 .videos {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  justify-content: center;
   margin-top: 20px;
 }
 
 .videos iframe {
   border: none;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Ensures videos maintain their aspect ratio */
+  height: auto;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  #main-container, body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar .intro p {
+    text-align: center;
+  }
 }
