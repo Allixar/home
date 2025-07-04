@@ -81,16 +81,16 @@ body {
 .project-category {
   margin-bottom: 40px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-color); /* Added separator */
+  border-bottom: 1px solid var(--border-color);
+  /* The border-left and padding-left have been removed from this rule */
 }
 
 .project-category:last-child {
-  border-bottom: none; /* Removes line after last section */
+  border-bottom: none;
 }
 
 .project {
   margin-bottom: 30px;
-  padding-left: 20px;
 }
 
 .project h4 {
@@ -113,11 +113,10 @@ body {
   background-color: var(--primary-hover);
 }
 
-/* 2. Styles for smooth expand/collapse animation */
 .project-details {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.7s ease-in-out, padding 0.5s ease;
+  transition: max-height 0.8s ease-out;
   margin-top: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -126,7 +125,7 @@ body {
 }
 
 .project-details.active {
-  max-height: 2000px; /* Adjust if content is very long */
+  max-height: 2000px;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 20px;
@@ -147,22 +146,6 @@ body {
   margin-bottom: 8px;
 }
 
-/* 3. Unify gallery layouts with CSS Grid */
-.project-visuals {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.project-visuals img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: var(--background-white);
-}
-
 .videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -177,7 +160,7 @@ body {
   height: auto;
 }
 
-/* Media query for responsiveness */
+/* --- Media Queries --- */
 @media (max-width: 768px) {
   #main-container, body {
     flex-direction: column;
@@ -191,13 +174,4 @@ body {
   .sidebar .intro p {
     text-align: center;
   }
-}
-
-.project-info {
-  margin-bottom: 20px;
-}
-
-.project-info .read-more-btn {
-  margin-top: 15px;
-  display: inline-block; /* Ensures margin-top works correctly */
 }
