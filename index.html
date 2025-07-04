@@ -40,25 +40,44 @@
         </div>
         <div class="project">
           <h4>Multimodal Biometric Authentication Project</h4>
-          [cite_start]<p>Fusion of face and palmprint biometrics using Python, OpenCV, and scikit-learn to enhance authentication security and accuracy, especially when face coverings are present[cite: 1, 9]. [cite_start]This system demonstrates improved robustness over single-modality methods by combining the unique features of both traits[cite: 8].</p>
+          <p>Fusion of face and palmprint biometrics using Python, OpenCV, and scikit-learn to enhance authentication security and accuracy, especially when face coverings are present. This system demonstrates improved robustness over single-modality methods by combining the unique features of both traits.</p>
           <button class="read-more-btn" onclick="toggleProjectDetails('biometrics-details')">Read More</button>
-          <div id="biometrics-details" class="project-details" style="display: none;">
+          <div id="biometrics-details" class="project-details">
             <h5>Project Overview</h5>
-            [cite_start]<p>Traditional single-modality biometric systems are vulnerable to spoofing and fail when the biometric input is obscured, a problem highlighted during the COVID-19 pandemic with face masks[cite: 6, 13, 146]. [cite_start]This project addresses these issues by fusing facial and palmprint data at the score-level to create a more resilient and accurate authentication system[cite: 7, 66].</p>
+            <p>Traditional single-modality biometric systems are vulnerable to spoofing and fail when the biometric input is obscured, a problem highlighted during the COVID-19 pandemic with face masks. This project addresses these issues by fusing facial and palmprint data at the score-level to create a more resilient and accurate authentication system.</p>
             <h5>Key Research Questions</h5>
             <ul>
-              [cite_start]<li>How does combining face and palmprint data affect authentication performance compared to a single modality? [cite: 19]</li>
-              [cite_start]<li>What is the impact of facial occlusions (like masks and glasses) on the multimodal system's performance? [cite: 21]</li>
+              <li>How does combining face and palmprint data affect authentication performance compared to a single modality?</li>
+              <li>What is the impact of facial occlusions (like masks and glasses) on the multimodal system's performance?</li>
             </ul>
             <h5>Methods & Datasets</h5>
-            <p>The system was developed using Python, Dlib, and scikit-learn. [cite_start]It leverages two public datasets: the <strong>Specs on Faces (SoF) Dataset</strong> for facial images with occlusions and the <strong>Birjand University Mobile Palmprint Database (BMPD)</strong>[cite: 17, 46]. [cite_start]Features were extracted from each and fed into five classification models (KNN, Decision Tree, SVM, Logistic Regression, LDA) [cite: 50-52, 56-61].</p>
+            <p>The system was developed using Python, Dlib, and scikit-learn. It leverages two public datasets: the <strong>Specs on Faces (SoF) Dataset</strong> for facial images with occlusions and the <strong>Birjand University Mobile Palmprint Database (BMPD)</strong>. Features were extracted from each and fed into five classification models (KNN, Decision Tree, SVM, Logistic Regression, LDA).</p>
             <h5>Key Results</h5>
-            [cite_start]<p>The k-Nearest Neighbors (KNN) classifier performed best for both individual modalities, with an Equal Error Rate (EER) of 0.192 for faces and 0.196 for palmprints[cite: 79, 81]. [cite_start]While the face modality showed better separation between genuine and impostor scores, the fusion of both created a more balanced and robust system, validating the hypothesis that multimodal systems are more resilient, especially against occlusions[cite: 85, 87, 93, 97].</p>
+            <p>The k-Nearest Neighbors (KNN) classifier performed best for both individual modalities, with an Equal Error Rate (EER) of 0.192 for faces and 0.196 for palmprints. While the face modality showed better separation between genuine and impostor scores, the fusion of both created a more balanced and robust system, validating the hypothesis that multimodal systems are more resilient, especially against occlusions.</p>
             <div class="project-visuals">
                 <img src="https://i.imgur.com/xLg6Q59.png" alt="Combined ROC Curve for Face Classifiers">
                 <img src="https://i.imgur.com/yVqfW9o.png" alt="Combined ROC Curve for Palm Classifiers">
                 <img src="https://i.imgur.com/N7sJcfC.png" alt="Bar chart showing Score-Level Fusion Metrics for EER, FAR, and FRR">
             </div>
+            
+            <div class="project-documents">
+              <h5>Project Documents</h5>
+              <div class="tabs">
+                <button class="tab-button active" onclick="openTab(event, 'report')">Project Report</button>
+                <button class="tab-button" onclick="openTab(event, 'presentation')">Presentation</button>
+              </div>
+
+              <div id="report" class="tab-content" style="display: block;">
+                <p>The full project report, detailing the methodology, results, and ethical considerations.</p>
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vTldYg3RuEOX_xMLiR05tMucqsDtnzAq7AekHAy6tDYTYae5RFxlSWUXo41-fp1Hw/pub?embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>
+              </div>
+
+              <div id="presentation" class="tab-content">
+                <p>A summary of the project findings, as presented to peers and faculty.</p>
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ5rTH-g6R-9pFWI12N2uiygurAvQyjDkPLAY8jEA-9Ia-PXvGNWde8sbQbiR1eEQ/pub?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+              </div>
+            </div>
+
           </div>
         </div>
       </article>
